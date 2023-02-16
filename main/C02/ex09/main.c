@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hburton <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 13:25:17 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:33 by hburton          ###   ########.fr       */
+/*   Created: 2023/02/16 13:50:37 by hburton           #+#    #+#             */
+/*   Updated: 2023/02/16 16:08:28 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_alphabet(void)
+char	*ft_strcapitalize(char *str);
+
+int	main(void)
 {
-	write(1, "zyxwvutsrqponmlkjihgfedcba", 26);
+	char	str1[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+	
+	printf("input : %s \n", str1);
+	printf("result : %s", ft_strcapitalize(str1));
+	return (0);
 }
