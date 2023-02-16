@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 16:33:36 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/16 15:03:44 by hburton          ###   ########.fr       */
+/*   Created: 2023/02/16 13:50:37 by hburton           #+#    #+#             */
+/*   Updated: 2023/02/16 13:58:12 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
-{
-	int	i;
+#include <stdio.h>
 
-	i = -1;
-	if (str[0] == 0)
-		return (1);
-	while (str[++i])
-	{
-		if (str[i] < 'A' || str[i] > 'z' || (str[i] > 'Z' && str[i] < 'a'))
-			return (0);
-	}
-	return (1);
+int	ft_str_is_uppercase(char *str);
+
+int	main(void)
+{
+	char	str1[9] = "MAJUSCULE";
+	
+	printf("MAJUSCULE : %d \n", ft_str_is_uppercase(&str1[9]));
+
+	char	str2[9] = "MAJuSCuLE";
+	printf("MAJuSCuLE : %d \n", ft_str_is_uppercase(&str2[9]));
+
+	char	str3[1] = "";
+	printf("null : %d \n", ft_str_is_uppercase(&str3[1]));
+	return (0);
 }

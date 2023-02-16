@@ -6,28 +6,21 @@
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:33:36 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/16 12:42:28 by hburton          ###   ########.fr       */
+/*   Updated: 2023/02/16 13:18:27 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (i <= 9)
-	{
-		printf("%c, \n ", str[i]);
-		i++;
-	}
-	return (0);
-}
+int	ft_str_is_alpha(char *str);
 
 int	main(void)
 {
-	char str1[10] = "sjeudnajd";
-	ft_str_is_alpha(&str1[10]);
+	char	str1[5] = "salut";
+	
+	printf("salut : %d \n", ft_str_is_alpha(&str1[5]));
+
+	char	str2[9] = "N0TALPHA";
+	printf("N0TALPHA : %d \n", ft_str_is_alpha(&str2[9]));
 	return (0);
 }

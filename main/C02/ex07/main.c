@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 16:33:36 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/16 15:03:44 by hburton          ###   ########.fr       */
+/*   Created: 2023/02/16 13:50:37 by hburton           #+#    #+#             */
+/*   Updated: 2023/02/16 15:31:14 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
-{
-	int	i;
+#include <stdio.h>
 
-	i = -1;
-	if (str[0] == 0)
-		return (1);
-	while (str[++i])
-	{
-		if (str[i] < 'A' || str[i] > 'z' || (str[i] > 'Z' && str[i] < 'a'))
-			return (0);
-	}
-	return (1);
+char	*ft_strupcase(char *str);
+
+int	main(void)
+{
+	char	str1[] = "HelLo wOrLd";
+	
+	printf("result : %s", ft_strupcase(str1));
+	return (0);
 }
+
