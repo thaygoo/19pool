@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hugoburton <hugoburton@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 17:00:45 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/16 19:00:06 by hugoburton       ###   ########.fr       */
+/*   Created: 2023/02/16 18:55:24 by hugoburton        #+#    #+#             */
+/*   Updated: 2023/02/16 19:05:05 by hugoburton       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-
-int	ft_strcmp(char *s1, char *s2);
-
-int main(void)
+int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char str1[] = "Hello world";
-	char str2[] = "";
+	int	i;
 
-	printf("strcmp : %d \n", strcmp(str1, str2));
-	printf("ft_strcmp : %d", ft_strcmp(str1, str2));
-	return 0;
+	i = 0;
+	while (s1[i] && s1[i] == s2[i] && i <= n)
+		i++;
+	return (s1[i] - s2[i]);
 }
