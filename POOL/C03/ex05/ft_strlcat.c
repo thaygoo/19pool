@@ -1,17 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 12:39:38 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/20 15:37:40 by hburton          ###   ########.fr       */
+/*   Created: 2023/02/20 15:47:16 by hburton           #+#    #+#             */
+/*   Updated: 2023/02/20 15:53:54 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -23,28 +20,37 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strcat(char *dest, char *src)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int	i;
-	int	destlen;
+	unsigned int	i;
+	unsigned int	length;
 
+	length = 0;
 	i = 0;
-	destlen = ft_strlen(dest);
-	while (src[i])
+	while (dest[length] && length < size)
+		length++;
+	while (src[i] && size && length + i < size - 1)
 	{
-		dest[destlen + i] = src[i];
+		dest[length + i] = src[i];
 		i++;
 	}
-	dest[destlen + i] = 0;
-	return (dest);
+	if (length < size)
+		dest[length + i] = 0;
+	i = 0;
+	while (src[i])
+		i++;
+	return (length + i);
 }
+
+#include <string.h>
+#include <stdio.h>
 
 int	main(int argc, char const *argv[])
 {
-	char	s1[10] = "test";
+	char	s1[] = "test";
 	char	s2[] = "copy";
 
-	printf("ft_ :%s \n", ft_strcat(s1, s2));
+	printf("ft_ :%d \n", ft_strlcat(s1, s2, 2));
+	printf(" _ :%d \n", strlcat(s1, s2, 2));
 	return (0);
-
 }

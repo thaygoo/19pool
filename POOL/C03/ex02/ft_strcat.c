@@ -6,7 +6,7 @@
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 18:12:58 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/20 15:13:40 by hburton          ###   ########.fr       */
+/*   Updated: 2023/02/20 15:24:53 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_strcat(char *dest, char *src)
 	dest[destlen + i] = 0;
 	return (dest);
 }
+
 /**
 #include <string.h>
 #include <stdio.h>
