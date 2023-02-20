@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 18:55:24 by hugoburton        #+#    #+#             */
-/*   Updated: 2023/02/20 12:17:42 by hburton          ###   ########.fr       */
+/*   Created: 2023/02/18 18:12:58 by hburton           #+#    #+#             */
+/*   Updated: 2023/02/20 10:37:37 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	int	i;
+#include <string.h>
+#include <stdio.h>
 
-	i = 0;
-	while (s1[i] && s1[i] == s2[i] && i <= n)
-		i++;
-	return (s1[i] - s2[i]);
+// char *ft_strcat(char *dest, char *src)
+// {
+	
+// }
+
+int main(int argc, char const *argv[])
+{
+	char	s1[] = "test";
+	char	s2[] = "copy";
+
+	printf("%s", strcat(s1, s2));
+	return 0;
 }

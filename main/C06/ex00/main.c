@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 18:55:24 by hugoburton        #+#    #+#             */
-/*   Updated: 2023/02/20 12:17:42 by hburton          ###   ########.fr       */
+/*   Created: 2023/02/17 12:24:13 by hburton           #+#    #+#             */
+/*   Updated: 2023/02/17 12:35:17 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	int	i;
+#include <stdio.h>
 
-	i = 0;
-	while (s1[i] && s1[i] == s2[i] && i <= n)
-		i++;
-	return (s1[i] - s2[i]);
+int	main(int argc, char **argv)
+{
+	printf("Nbr d'arguments : %d\n", argc);
+	printf("Value : %s", argv[1]);
+	return (0);
 }
