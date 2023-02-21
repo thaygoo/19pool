@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hburton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:25:17 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/09 14:09:33 by hburton          ###   ########.fr       */
+/*   Updated: 2023/02/21 14:39:19 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
 	write(1, "zyxwvutsrqponmlkjihgfedcba", 26);
 }

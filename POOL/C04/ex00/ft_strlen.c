@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 18:55:24 by hugoburton        #+#    #+#             */
-/*   Updated: 2023/02/21 13:44:49 by hburton          ###   ########.fr       */
+/*   Created: 2023/02/21 13:53:07 by hburton           #+#    #+#             */
+/*   Updated: 2023/02/21 14:03:49 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <stdio.h>
+
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (s1[i] && s1[i] == s2[i] && n > 0)
-	{
-		i++;
-		n--;
-	}
-	if (n == 0)
-		return (0);
-	return (s1[i] - s2[i]);
+	while (str[++i])
+		;
+	return (i);
 }
+
+/** int	main(void)
+{
+	char str[] = "123456";
+
+	printf("%d", ft_strlen(str));
+	return (0);
+} **/

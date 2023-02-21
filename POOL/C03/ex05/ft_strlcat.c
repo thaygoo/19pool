@@ -6,19 +6,9 @@
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 15:47:16 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/20 15:53:54 by hburton          ###   ########.fr       */
+/*   Updated: 2023/02/21 18:47:01 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
@@ -42,7 +32,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (length + i);
 }
 
-#include <string.h>
+/**	 #include <string.h>
 #include <stdio.h>
 
 int	main(int argc, char const *argv[])
@@ -50,7 +40,8 @@ int	main(int argc, char const *argv[])
 	char	s1[] = "test";
 	char	s2[] = "copy";
 
-	printf("ft_ :%d \n", ft_strlcat(s1, s2, 2));
-	printf(" _ :%d \n", strlcat(s1, s2, 2));
+	printf("ft_ :%d \n", ft_strlcat(s1, s2, 4));
+	printf(" _ :%lu \n", strlcat(s1, s2, 4));
 	return (0);
 }
+ **/
