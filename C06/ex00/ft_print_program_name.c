@@ -6,7 +6,7 @@
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:21:08 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/17 12:48:25 by hburton          ###   ########.fr       */
+/*   Updated: 2023/02/27 13:44:57 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void	ft_putstr(char *str)
 
 	i = -1;
 	while (str[++i])
-	{
 		write(1, &str[i], 1);
-	}
 }
 
 int	main(int argc, char **argv)
