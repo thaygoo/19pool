@@ -6,7 +6,15 @@
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 16:14:07 by hburton           #+#    #+#             */
-/*   Updated: 2023/03/01 16:14:08 by hburton          ###   ########.fr       */
+/*   Updated: 2023/03/01 17:02:37 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void	ft_swap(int *a, int *b)
+{
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}

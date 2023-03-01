@@ -6,7 +6,9 @@
 #    By: hburton <hburton@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 16:14:13 by hburton           #+#    #+#              #
-#    Updated: 2023/03/01 16:14:14 by hburton          ###   ########.fr        #
+#    Updated: 2023/03/01 17:03:14 by hburton          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+gcc -Wall -Werror -Wextra -c *.c
+ar rc libft.a *.o

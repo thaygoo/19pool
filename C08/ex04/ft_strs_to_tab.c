@@ -6,7 +6,7 @@
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 14:59:36 by hburton           #+#    #+#             */
-/*   Updated: 2023/03/01 15:56:51 by hburton          ###   ########.fr       */
+/*   Updated: 2023/03/01 17:08:41 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,20 @@ char	*ft_strdup(char *src)
 	return (ret);
 }
 
+void	free_copy(t_stock_str *tab, int i)
+{
+	int	a;
+
+	a = 0;
+	while (a <= i)
+	{
+		free(tab[i].copy);
+		a++;
+	}
+	free(tab);
+	return ;
+}
+
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	int			i;
@@ -57,6 +71,11 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 		tab[i].size = ft_strlen(av[i]);
 		tab[i].str = av[i];
 		tab[i].copy = ft_strdup(tab[i].str);
+		if (!tab[i].copy)
+		{
+			free_copy(tab, i);
+			return (NULL);
+		}
 		i++;
 	}
 	tab[i].str = 0;
