@@ -6,7 +6,7 @@
 /*   By: hburton <hburton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 13:59:26 by hburton           #+#    #+#             */
-/*   Updated: 2023/02/28 12:34:52 by hburton          ###   ########.fr       */
+/*   Updated: 2023/03/01 15:53:56 by hburton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,20 @@ int	ft_strlen(char *str)
 
 char	*ft_strdup(char *src)
 {
-	char	*result;
+	char	*ret;
 	int		i;
 
-	result = malloc((ft_strlen(src) + 1) * sizeof(char));
-	if (!result)
+	i = 0;
+	ret = malloc((ft_strlen(src) + 1) * sizeof(char));
+	if (!ret)
 		return (NULL);
 	while (src[i])
 	{
-		result[i] = src[i];
+		ret[i] = src[i];
 		i++;
 	}
-	return (src);
+	ret[i] = 0;
+	return (ret);
 }
 
 /** 
